@@ -1,9 +1,6 @@
 configstore/
 htop/
 iterm2/
-fish/completions/
-fish/conf.d
-fish/fish_plugins
-fish/fish_variables
-fish/functions
+
+fish
 
