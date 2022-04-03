@@ -1,6 +1,6 @@
 configstore/
 htop/
 iterm2/
-fish/
+fish/*
 !fish/config.fish
 
