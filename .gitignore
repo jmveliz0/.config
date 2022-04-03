@@ -2,4 +2,5 @@ configstore/
 htop/
 iterm2/
 fish/
+!fish/config.fish
 
