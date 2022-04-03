@@ -3,4 +3,7 @@ htop/
 iterm2/
 fish/*
 !fish/config.fish
+!fish/functions/fish_mode_prompt.fish
+!fish/functions/fish_prompt.fish
+!fish/functions/fish_user_key_bindings.fish
 
