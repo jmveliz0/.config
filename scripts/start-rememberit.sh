@@ -1,3 +1,6 @@
+#!/bin/bash
+
+if ! tmux has-session -t rememberit; then
 # Paths
 rememberitPath=~/dev/personal/rememberit-project
 frontendPath=$rememberitPath/rememberit
@@ -21,10 +24,13 @@ tmux new-window -c $backendPath -n backend -t rememberit:2
 tmux send-keys -t rememberit:2 "vim ." Enter
 tmux split-window -h -c $backendPath -t rememberit:2
 tmux send-keys -t rememberit:2.1 "$backendStartCommand" Enter 
-tmux split-window -c $backendPath -t rememberit:2.1
 
 # Open docker and start mongo instance
+tmux split-window -c $backendPath -t rememberit:2.1
 tmux send-keys -t rememberit:2.2 "open -g -a Docker &" Enter
 tmux send-keys -t rememberit:2.2 "sleep 4 &" Enter
 tmux send-keys -t rememberit:2.2 "wait" Enter
 tmux send-keys -t rememberit:2.2 "docker start rememberit-mongo" Enter 
+fi
+
+tmux attach -t rememberit
